@@ -1,8 +1,12 @@
+require('dotenv').config();
+
+/**
+ * This script migrates all users from one price to another price
+ */
+
 const Stripe = require('stripe');
 
-const STRIPE_SECRET_KEY = '';
-
-const stripe = new Stripe(STRIPE_SECRET_KEY, {
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
 	apiVersion: '2022-11-15'
 });
 
